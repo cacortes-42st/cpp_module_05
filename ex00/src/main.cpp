@@ -6,7 +6,7 @@
 /*   By: cacortes <cacortes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/22 11:08:07 by cacortes          #+#    #+#             */
-/*   Updated: 2026/08/22 22:19:33 by cacortes         ###   ########.fr       */
+/*   Updated: 2026/08/23 10:20:42 by cacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int	main()
 
 	std::cout << "\n===== INCREMENT GRADE TEST =====" << std::endl;
 
-	Bureaucrat	steve("Steve", 40);
+	Bureaucrat	steve("Steve", 1);
 	try
 	{
 		std::cout << "Old grade level: " << steve.getGrade() << std::endl;
@@ -66,6 +66,13 @@ int	main()
 	{
 		std::cerr << "Error caught on " << sam.getName() << ": " << e.what() << std::endl;
 	}
+
+
+	std::cout << "\n===== OPERATOR << TEST =====" << std::endl;
+
+	Bureaucrat	wilson("Wilson", 80);
+	std::cout << wilson << std::endl;
+
 
 	std::cout << "\n===== END ====="<< std::endl;
 }
