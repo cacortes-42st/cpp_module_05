@@ -5,12 +5,13 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: cacortes <cacortes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/22 11:07:53 by cacortes          #+#    #+#             */
-/*   Updated: 2026/08/23 14:42:46 by cacortes         ###   ########.fr       */
+/*   Created: 2026/08/23 10:35:07 by cacortes          #+#    #+#             */
+/*   Updated: 2026/08/23 14:40:56 by cacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 
 Bureaucrat::Bureaucrat() : name("default"), grade(150)
 {
@@ -46,6 +47,21 @@ Bureaucrat::Bureaucrat(const std::string name, int grade) : name(name)
 		throw GradeTooHighException();
 	else
 		this->grade = grade;
+}
+
+void	Bureaucrat::signForm(Form &form)
+{
+	try
+	{
+		form.beSigned(*this);
+	}
+	catch (std::exception& e)
+	{
+		std::cout << getName() << " couldn’t sign " << form.getFormName() << " because " << e.what() << std::endl;
+		return;
+	}
+	std::cout << getName() << " signed " << form.getFormName() << std::endl;
+	
 }
 
 

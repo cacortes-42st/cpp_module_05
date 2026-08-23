@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: cacortes <cacortes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/22 11:07:27 by cacortes          #+#    #+#             */
-/*   Updated: 2026/08/23 14:42:15 by cacortes         ###   ########.fr       */
+/*   Created: 2026/08/23 10:34:59 by cacortes          #+#    #+#             */
+/*   Updated: 2026/08/23 14:41:14 by cacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 #include <string>
 #include <iostream>
 #include <exception>
+
+class Form;
 
 class	Bureaucrat
 {
@@ -30,6 +32,8 @@ class	Bureaucrat
 		~Bureaucrat();
 
 		Bureaucrat(const std::string name, int grade);
+
+		void	signForm(Form &form);
 
 		std::string getName(void)const;
 		int getGrade(void)const;
