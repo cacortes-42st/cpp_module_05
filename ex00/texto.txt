@@ -1,1 +1,3 @@
 recordar comprobar si la salida es igual a la del chatgpt
+
+Quizá hay que darle una vuelta a los tests del ex02

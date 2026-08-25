@@ -6,7 +6,7 @@
 /*   By: cacortes <cacortes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/24 10:32:11 by cacortes          #+#    #+#             */
-/*   Updated: 2026/08/24 11:15:23 by cacortes         ###   ########.fr       */
+/*   Updated: 2026/08/25 11:35:29 by cacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ class	Bureaucrat
 		int	grade;
 
 	public:
+		void executeForm(AForm const & form)const;
+
 		Bureaucrat();
 		Bureaucrat(const Bureaucrat &other);
 		Bureaucrat &operator=(const Bureaucrat &value);

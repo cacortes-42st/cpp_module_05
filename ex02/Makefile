@@ -6,11 +6,11 @@
 #    By: cacortes <cacortes@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/08/24 09:32:44 by cacortes          #+#    #+#              #
-#    Updated: 2026/08/24 11:13:55 by cacortes         ###   ########.fr        #
+#    Updated: 2026/08/25 12:51:17 by cacortes         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = src/main.cpp src/Bureaucrat.cpp src/AForm.cpp
+SRCS = src/main.cpp src/Bureaucrat.cpp src/AForm.cpp src/ShrubberyCreationForm.cpp src/RobotomyRequestForm.cpp src/PresidentialPardonForm.cpp
 NAME = formneed
 
 CC = c++

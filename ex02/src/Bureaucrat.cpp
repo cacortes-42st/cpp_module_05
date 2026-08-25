@@ -6,7 +6,7 @@
 /*   By: cacortes <cacortes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/24 10:32:26 by cacortes          #+#    #+#             */
-/*   Updated: 2026/08/24 11:12:25 by cacortes         ###   ########.fr       */
+/*   Updated: 2026/08/25 13:05:52 by cacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,19 @@ Bureaucrat::~Bureaucrat()
 	std::cout << "Bureaucrat " << getName() << " destructor called" << std::endl;
 }
 
+
+void Bureaucrat::executeForm(AForm const & form)const
+{
+	try
+	{
+		form.execute(*this);
+		std::cout << name << " executed " << form.getAFormName() << std::endl;
+	}
+	catch (std::exception & e)
+	{
+		std::cerr << e.what() << '\n';
+	}
+}
 
 Bureaucrat::Bureaucrat(const std::string name, int grade) : name(name)
 {

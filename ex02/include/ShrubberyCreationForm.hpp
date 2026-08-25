@@ -6,14 +6,20 @@
 /*   By: cacortes <cacortes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/24 11:32:14 by cacortes          #+#    #+#             */
-/*   Updated: 2026/08/24 17:52:21 by cacortes         ###   ########.fr       */
+/*   Updated: 2026/08/25 13:23:48 by cacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SHRUBBERY_HPP
 #define SHRUBBERY_HPP
 
-class ShrubberyCreationForm : public Form
+#include "AForm.hpp"
+#include "Bureaucrat.hpp"
+#include <string>
+#include <fstream>
+#include <iostream>
+
+class ShrubberyCreationForm : public AForm
 {
 	private:
 		std::string target;
@@ -23,7 +29,9 @@ class ShrubberyCreationForm : public Form
 		ShrubberyCreationForm &operator=(const ShrubberyCreationForm &value);
 		~ShrubberyCreationForm();
 
-		std::ofstream file((target + "_shrubbery").c_str());
+		ShrubberyCreationForm(std::string target);
+
+		void execute(Bureaucrat const & executor)const;
 };
 
 

@@ -6,12 +6,24 @@
 /*   By: cacortes <cacortes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/24 11:07:59 by cacortes          #+#    #+#             */
-/*   Updated: 2026/08/24 11:14:52 by cacortes         ###   ########.fr       */
+/*   Updated: 2026/08/25 16:22:51 by cacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AForm.hpp"
 #include "Bureaucrat.hpp"
+
+void AForm::checkExecution(Bureaucrat const &executor) const
+{
+	if (isSigned == true)
+	{
+		if (executor.getGrade() > ExGrade)
+			throw GradeTooLowException();
+	}
+	else
+		throw NoExecutionException();
+}
+
 
 AForm::AForm() : name("default"), isSigned(false), SigGrade(150), ExGrade(150) 
 {
@@ -25,7 +37,7 @@ AForm::AForm(const AForm &other) : name(other.name), isSigned(other.isSigned), S
 
 AForm &AForm::operator=(const AForm &value)
 {
-	if (this != &value)
+	if (this != &value) 
 		isSigned = value.isSigned;
 
 	std::cout << "AForm " << getAFormName() << " assigment operator called." << std::endl;
@@ -93,6 +105,11 @@ const char *AForm::GradeTooHighException::what() const throw()
 const char *AForm::GradeTooLowException::what() const throw()
 {
 	return "the grade of the bureaucrat is too low for the AForm.";
+}
+
+const char *AForm::NoExecutionException::what() const throw()
+{
+	return "The AForm needs to be signed before the execution.";
 }
 
 

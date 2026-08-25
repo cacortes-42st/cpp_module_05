@@ -6,10 +6,9 @@
 /*   By: cacortes <cacortes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/24 11:07:52 by cacortes          #+#    #+#             */
-/*   Updated: 2026/08/24 12:49:53 by cacortes         ###   ########.fr       */
+/*   Updated: 2026/08/25 14:12:49 by cacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #ifndef FORM_HPP
 #define FORM_HPP
@@ -29,12 +28,13 @@ class	AForm
 		const int ExGrade;
 
 	public:
-		execute(Bureaucrat const & executor) = 0;
+		virtual void execute(Bureaucrat const & executor)const = 0;
+		void checkExecution(Bureaucrat const &executor) const;
 
 		AForm();
 		AForm(const AForm &other);
 		AForm &operator=(const AForm &value);
-		~AForm();
+		virtual ~AForm();
 
 		AForm(std::string name, int sig, int ex);
 
@@ -53,6 +53,12 @@ class	AForm
 	};
 
 	class GradeTooLowException : public std::exception
+	{
+		public:
+			const char *what() const throw();
+	};
+	
+	class NoExecutionException : public std::exception
 	{
 		public:
 			const char *what() const throw();
