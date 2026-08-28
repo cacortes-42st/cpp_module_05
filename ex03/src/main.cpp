@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cacortes <cacortes@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cacortes <cacortes@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/26 09:24:51 by cacortes          #+#    #+#             */
-/*   Updated: 2026/08/26 16:31:56 by cacortes         ###   ########.fr       */
+/*   Updated: 2026/08/28 12:09:23 by cacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int	main()
 
 	Intern *jim = new Intern();
 	
-	AForm *Sform = jim->makeForm("shrubbery creation", "themes");
+	AForm *Sform = jim->makeForm("shrubbery creation", "olive");
 
 	std::cout << "\n===== END ====="<< std::endl;
 
@@ -47,7 +47,7 @@ int	main()
 
 	Intern *bob = new Intern();
 	
-	AForm *Rform = bob->makeForm("robotomy request", "themes");
+	AForm *Rform = bob->makeForm("robotomy request", "H.E.R.B.I.E.");
 
 	std::cout << "\n===== END ====="<< std::endl;
 
@@ -59,7 +59,7 @@ int	main()
 
 	Intern *tim = new Intern();
 	
-	AForm *Pform = tim->makeForm("presidential pardon", "themes");
+	AForm *Pform = tim->makeForm("presidential pardon", "John");
 
 	std::cout << "\n===== END ====="<< std::endl;
 

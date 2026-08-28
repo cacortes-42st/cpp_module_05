@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Form.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cacortes <cacortes@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cacortes <cacortes@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/23 11:25:21 by cacortes          #+#    #+#             */
-/*   Updated: 2026/08/23 14:39:41 by cacortes         ###   ########.fr       */
+/*   Updated: 2026/08/28 11:43:59 by cacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,10 +49,6 @@ static int checkGrade(int grade)
 }
 Form::Form(std::string name, int sig, int ex) : name(name), isSigned(false), SigGrade(checkGrade(sig)), ExGrade(checkGrade(ex))
 {
-	std::cout << "The form: " << getFormName() 
-		<< ", has the signed status " << getSignedStat() 
-		<< ", the grade required to sign it is " << getSigGrade() 
-		<< ", the grade required to execute it is " << getExGrade() << ".\n" << std::endl;
 }
 
 void Form::beSigned(const Bureaucrat &b)

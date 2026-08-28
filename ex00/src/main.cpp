@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cacortes <cacortes@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cacortes <cacortes@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/22 11:08:07 by cacortes          #+#    #+#             */
-/*   Updated: 2026/08/23 10:20:42 by cacortes         ###   ########.fr       */
+/*   Updated: 2026/08/28 11:21:06 by cacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int	main()
 
 	std::cout << "\n===== INCREMENT GRADE TEST =====" << std::endl;
 
-	Bureaucrat	steve("Steve", 1);
+	Bureaucrat	steve("Steve", 3);
 	try
 	{
 		std::cout << "Old grade level: " << steve.getGrade() << std::endl;

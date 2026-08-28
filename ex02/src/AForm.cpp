@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AForm.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cacortes <cacortes@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cacortes <cacortes@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/24 11:07:59 by cacortes          #+#    #+#             */
-/*   Updated: 2026/08/25 16:22:51 by cacortes         ###   ########.fr       */
+/*   Updated: 2026/08/28 12:00:39 by cacortes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,10 +61,6 @@ static int checkGrade(int grade)
 }
 AForm::AForm(std::string name, int sig, int ex) : name(name), isSigned(false), SigGrade(checkGrade(sig)), ExGrade(checkGrade(ex))
 {
-	std::cout << "The Aform: " << getAFormName() 
-		<< ", has the signed status " << getSignedStat() 
-		<< ", the grade required to sign it is " << getSigGrade() 
-		<< ", the grade required to execute it is " << getExGrade() << ".\n" << std::endl;
 }
 
 void AForm::beSigned(const Bureaucrat &b)

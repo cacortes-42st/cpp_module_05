@@ -3,15 +3,15 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: cacortes <cacortes@student.42.fr>          +#+  +:+       +#+         #
+#    By: cacortes <cacortes@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/08/22 10:03:21 by cacortes          #+#    #+#              #
-#    Updated: 2026/08/22 21:32:59 by cacortes         ###   ########.fr        #
+#    Updated: 2026/08/28 11:23:53 by cacortes         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRCS = src/main.cpp src/Bureaucrat.cpp
-NAME = bureucrat
+NAME = bureaucrat
 
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98 -Iinclude
